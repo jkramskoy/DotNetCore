@@ -1,4 +1,5 @@
 ﻿using System;
+using MySql.Data.MySqlClient;
 
 namespace DotNetCore
 {
@@ -6,7 +7,9 @@ namespace DotNetCore
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World new project!");
+
+            
         }
     }
 }
