@@ -1,23 +1,36 @@
 ﻿using System;
+using System.Text;
+using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 
 namespace DotNetCore
 {
     class Program
     {
-        static void Main(string[] args) {
-        }
-        
-             private int _id;
-             private string _name;
-
-        public Program(string name)
+        static void Main(string[] args)
         {
-            _name = name;
-        }
+        
+//remove not from the sentence.
+        string input = @"I do not like them
+In a house.
+I do not like them
+With a mouse.
+I do not like them
+Here or there.
+I do not like them
+Anywhere.
+I do not like green eggs and ham.
+I do not like them, Sam - I - am.";
 
-              public string Name { get => _name; set => _name = value; }
-              public int Id { get => _id; set => _id = value; }
+        //Console.WriteLine(input);
+
+        StringBuilder sb = new StringBuilder(input);
+
+        sb.Replace("not", string.Empty);
+sb.Replace(" ", " ");
+
+Console.WriteLine(sb.ToString());
+        }
     }
 }
 
