@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Number_ToWords", "Number_To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPractice", "JsonPractice\JsonPractice.csproj", "{1A393CC9-C20F-4C3B-A72C-29A381EE207E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML_Practice", "XML_Practice\XML_Practice.csproj", "{D808E958-B1FB-4910-8A93-1372066D7529}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{1A393CC9-C20F-4C3B-A72C-29A381EE207E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A393CC9-C20F-4C3B-A72C-29A381EE207E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A393CC9-C20F-4C3B-A72C-29A381EE207E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D808E958-B1FB-4910-8A93-1372066D7529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D808E958-B1FB-4910-8A93-1372066D7529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D808E958-B1FB-4910-8A93-1372066D7529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D808E958-B1FB-4910-8A93-1372066D7529}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
