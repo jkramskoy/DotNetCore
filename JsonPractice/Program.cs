@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text.Json;
+using System.Xml.Linq;
 
 namespace JsonPractice
 {
@@ -28,6 +30,8 @@ namespace JsonPractice
     {
         static void Main(string[] args)
         {
+
+            //JSON file 
             try
             {
                 //create file
@@ -36,7 +40,7 @@ namespace JsonPractice
 
                 Console.Write(jsonFile);
                 var resolt = JsonSerializer.Deserialize<Top>(jsonFile); // convert from JSON formate to Object
-               
+
 
                 Console.WriteLine(resolt.menu.header);
 
@@ -56,15 +60,35 @@ namespace JsonPractice
                         Console.WriteLine("\t null");
 
                 }
+              
+
+                // XML file
+
+                XDocument xmlDoc = new XDocument(
+                new XElement("menu",
+                          new XElement("header", "Abode " + resolt.menu.header),
+                          resolt.menu.items
+                           .Select(i => i != null ?
+                             new XElement("item",
+                               new XAttribute("action", i.id),
+                               new XAttribute("id", i.id),
+                                 i.label != null ?
+                                   i.label : i.id
+
+                       ) : new XElement("separator")
+                     )
+                 )
+               );
+                xmlDoc.Save("Menu_new.xml");
+
+                Console.Write("File was saved");
 
             }
             catch (Exception ex)
             {
                 Console.Write(ex.Message);
             }
-
-
         }
     }
 }
-    
+
